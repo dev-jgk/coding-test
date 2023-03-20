@@ -1,6 +1,6 @@
-```
 1번(https://school.programmers.co.kr/learn/courses/30/lessons/120923)
 
+```
 class Solution {
     public int[] solution(int num, int total) {
         int[] answer = new int[num]; // 배열의 길이 = 정수(num)의 갯수
@@ -14,8 +14,9 @@ class Solution {
 }
 ```
 
-```
 2번(https://school.programmers.co.kr/learn/courses/30/lessons/120907)
+
+```
 import java.util.Arrays;
 
 class Solution {
@@ -105,8 +106,9 @@ class Solution {
         // }
 ```
 
-```
 3번(https://school.programmers.co.kr/learn/courses/30/lessons/120913)
+
+```
 import java.util.*;
 
 class Solution {
@@ -145,8 +147,9 @@ class Solution {
 }
 ```
 
-```
 4번(https://school.programmers.co.kr/learn/courses/30/lessons/120883)
+
+```
 import java.util.*;
 class Solution {
     public String solution(String[] id_pw, String[][] db) {
@@ -204,9 +207,9 @@ class Solution {
 }
 ```
 
-```
 5번(https://school.programmers.co.kr/learn/courses/30/lessons/120956)
 
+```
 import java.util.*;
 
 // import org.apache.commons.lang.StringUtils;

@@ -9,6 +9,7 @@ public class test2 {
         String[] quiz = {"3 - 4 = -3", "5 + 6 = 11"};
 
         System.out.println(Arrays.toString(test2.solution(quiz)));
+
     }
         public String[] solution(String[] quiz) {
             String[] answer = new String[quiz.length];

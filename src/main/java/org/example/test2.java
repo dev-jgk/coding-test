@@ -11,7 +11,6 @@ public class test2 {
         System.out.println(Arrays.toString(test2.solution(quiz)));
     }
         public String[] solution(String[] quiz) {
-
             String[] answer = new String[quiz.length];
 
             for(int i = 0; i<=quiz.length-1;i++){

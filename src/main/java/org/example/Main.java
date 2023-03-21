@@ -5,6 +5,7 @@ public class Main {
         class test1 {
             public int[] solution(int num, int total) {
                 int[] answer = new int[num]; // 배열의 길이 = 정수(num)의 갯수
+
                 int number = total / num; // 배열의 중간 값 산출
 
                 for (int i = 0; i <= answer.length - 1; i++) { // 첫번째 index부터 마지막 index까지 반복

@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class test2 {
     public static void main(String[] args) {
         test2 test2 = new test2();
+
         String[] quiz = {"3 - 4 = -3", "5 + 6 = 11"};
 
         System.out.println(Arrays.toString(test2.solution(quiz)));

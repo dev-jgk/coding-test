@@ -1,6 +1,6 @@
 package org.example;
 
-public class Main {
+public class test1 {
     public static void main(String[] args) {
         class test1 {
             public int[] solution(int num, int total) {

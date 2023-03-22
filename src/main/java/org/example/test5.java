@@ -1,8 +1,14 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class test5 {
     public static void main(String[] args) {
-        String[] babbling = {"aya", "yee", "u", "maa", "wyeoo"};
+        String[] babbling = {"ayaye", "uuuma", "ye", "yemawoo", "ayaa"};
         System.out.println(solution(babbling));
     }
         public static int solution(String[] babbling) {
@@ -22,14 +28,15 @@ public class test5 {
             // String str = String.join("", babbling);
             // System.out.println("str : " + str);
 
-             for(int i = 0; i < babbling.length;i++){
-                 String str = babbling[i];
-                 String[] arr = str.split("aya|ye|woo|ma");
-                 if(arr.length == 0){
-                     answer++;
-                 }
-             }
-             return answer;
+            // for문 정규표현식 사용 정답
+//             for(int i = 0; i < babbling.length;i++){
+//                 String str = babbling[i];
+//                 String[] arr = str.split("aya|ye|woo|ma");
+//                 if(arr.length == 0){
+//                     answer++;
+//                 }
+//             }
+//             return answer;
 
             // stream 도전
             // Stream<String> stream = Arrays.stream(babbling);
@@ -38,15 +45,67 @@ public class test5 {
             // System.out.println(Arrays.stream(babbling));
 
             // return Arrays.stream(babbling).splitAsStream("word1|word2|word3|word4");
+
 //            Stream<String> strr = Arrays.stream(babbling)
-//                    .distinct()
-//                    .filter(name -> name.matches("aya|ye|woo|ma"));
+//                                  .filter(name -> name.matches("aya|ye|woo|ma"));
+
+//            long answer = Arrays.stream(babbling)
+//                    .map(x -> x.replaceAll("aya|ye|woo|ma", ""))
+//                    .filter(x -> x.isEmpty())
+//                    .count();
+
+            //확인 해봄
+//            List<String[]> answer1 = Arrays.stream(babbling)
+//                    .map(x -> x.split("aya|ye|woo|ma"))
+//                    .collect(Collectors.toList());
 //
+//            for (String[] aa : answer1){
+//                System.out.println(Arrays.toString(aa));
+//            }
+
+            // Stream 사용 1(isEmpty)
+//            answer = (int)Arrays.stream(babbling)
+//                    .map(x -> x.replaceAll("aya|ye|woo|ma", ""))
+//                    .filter(x -> x.isEmpty())
+//                    .count();
+
+            // Stream 사용 2(length)
+            answer = (int)Arrays.stream(babbling)
+                    .map(x -> x.split("aya|ye|woo|ma"))
+                    .filter(x -> x.length == 0)
+                    .count();
+
+//            String abcd = "[]";
+//
+//            System.out.println("abcd" + abcd);
+//
+//            long answer2 = Arrays.stream(babbling)
+//                    .map(x -> x.split("aya|ye|woo|ma"))
+//                            .filter(x -> x.length == 0).count();
+//
+//
+//            System.out.println("answer2 : " + answer2);
+
+
+
+
+//
+//            System.out.println(answer);
+
+//            System.out.println(strr);
+
+
+
+
+//            .map(x -> x.replace("aya|ye|woo|ma", ""))
+//                    .filter(x -> x.matches("aya|ye|woo|ma")).count();
+
+
+
+
 //            answer = (int) strr.count();
-//
-//            return answer;
 
-
+            return answer;
 
             // if(str.contains(word1)){
             //     answer++;
